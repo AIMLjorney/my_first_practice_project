@@ -126,4 +126,109 @@
 #     if (choice == 1):
 
 
+##################### Number Guessing game ################
+# class maxnumber(Exception):
+#     def __init__(self,message):
+#         self.message = message
+#         super().__init__(self.message)
+        
 
+# class minnumber(Exception):
+#     def __init__(self,message):
+#         self.message = message
+#         super().__init__(self.message)
+        
+# max = 100
+# while True:
+#     try:
+#         num = int(input("Enter the guessing value of your : "))
+#         if (num == max):
+#             print("wow ! what`s great guess ")
+#             print("you winner")
+#             break
+
+#         elif(num<max):
+#             raise maxnumber("Your guess value is small long")
+
+#         elif(num>max):
+#             raise minnumber("Ypur guess values is too long")
+
+#     except maxnumber as e:
+#         print(e)
+#         print("Try again !")
+#         print()
+
+#     except minnumber as e:
+#         print(e)
+#         print("Try again !")
+#         print()
+
+#     else:
+#         print("Code is well executed")                   
+
+
+##############  quiz application ##########################
+# def app():
+#     questions = [
+#         {
+#             "question":"What is the capital of France?",
+#             "options":["A. Paris", "B. Madrid", "C. Rome", "D. Berlin"],
+#             "answer": "A"
+#         },
+#         {
+#             "question": "Which programming language is known as the 'language of AI'?",
+#             "options": ["A. Java", "B. Python", "C. C++", "D. JavaScript"],
+#             "answer": "B"
+#         },
+#         {
+#             "question": "What is 5 + 3?",
+#             "options": ["A. 5", "B. 6", "C. 7", "D. 8"],
+#             "answer": "D"
+#         },
+#         {
+#             "question": "Which planet is known as the Red Planet?",
+#             "options": ["A. Earth", "B. Venus", "C. Mars", "D. Jupiter"],
+#             "answer": "C"
+#         }
+#     ]
+#     scores = 0
+#     print("Welcome to the Quiz App!") 
+#     for i,q in enumerate(questions,start=1):
+#         print(f"question {i} : {q['question']}")
+#         for j in q["options"]:
+#             print(j)
+#         ans = input("Enter your answer(A,B,C,D):- ")
+#         if (ans==q["answer"]):
+#             print("Correct !") 
+#             scores+=1
+#         else:
+#             print("Wrong ! the correct answer was {}".format(q["answer"]))       
+#         print() 
+#         print()   
+#     return (scores,i)
+# num="yes"
+# while num=="yes":
+#     qiz,total_ques = app()
+#     print(qiz,total_ques)
+#     percentaze = qiz/total_ques
+#     print(f"Your percentage : {percentaze*100}%") 
+#     num = input("Do you want to play again?(yes/no):- ")
+#     if (num=='yes'):
+#         num = "yes"
+#     else:
+#         print("Thanks for playing! Goodbye!") 
+#         num = "no"
+#         print()
+#         break   
+
+
+import turtle as t
+import time as ti
+t.forward(50)
+ti.sleep(2)
+t.backward(20)
+
+
+
+
+  
