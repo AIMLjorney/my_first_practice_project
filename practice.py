@@ -224,11 +224,30 @@
 
 import turtle as t
 import time as ti
-t.forward(50)
-ti.sleep(2)
-t.backward(20)
+# t.forward(50)
+# ti.sleep(2)
+# t.backward(20)
 
 
 
+# t.bgcolor("black")
+# t.color("red","blue")
+# t.pensize(1)
+# for angle in range(0,400,30):
+#     t.seth(angle)
+#     t.circle(100)
+# ti.sleep(3)   
+# 
 
+# t.color("green")
+# t.forward(70)
+# t.left(120)
+# t.forward(70)
+# t.left(120)
+# t.forward(80)
+# ti.sleep(5) 
   
+t.forward(100)
+t.left(70)
+t.forward(70)
+t.left(70)  
