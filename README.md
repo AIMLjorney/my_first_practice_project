@@ -6,3 +6,7 @@ Author :- Tarun kumawt
 Age :- 18
 <br>
 programme :- BCA 2TH Year students
+
+hello
+<br>
+in the first four question described that how to python try and except of Error and exception handling in the code and solve the critical question and decrease the chance of error genrating 
