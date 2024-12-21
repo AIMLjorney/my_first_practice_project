@@ -376,73 +376,75 @@ import time as ti
 # except Exception as e:
 #     print(e)  
 
-class converts:
-    def __init__(self,choi,value): 
-        self.choi = choi
-        self.value = value
+# class converts:
+#     def __init__(self,choi,value): 
+#         self.choi = choi
+#         self.value = value
 
-    def distances(self):
-        if(self.choi==1):
-            return (self.value*0.621371)
-        elif(self.choi == 2):
-            return (self.value*1.60934)
-        else:
-            return ("Enter the valid key")
+#     def distances(self):
+#         if(self.choi==1):
+#             return (self.value*0.621371)
+#         elif(self.choi == 2):
+#             return (self.value*1.60934)
+#         else:
+#             return ("Enter the valid key")
 
-    def temperatures(self):
-        if(self.choi==1):
-            return (self.value*(9/5)+32)
-        elif(self.choi == 2):
-            return ((self.value-32)*5/9)
-        else:
-            return ("Enter the valid key")  
+#     def temperatures(self):
+#         if(self.choi==1):
+#             return (self.value*(9/5)+32)
+#         elif(self.choi == 2):
+#             return ((self.value-32)*5/9)
+#         else:
+#             return ("Enter the valid key")  
 
-    def weights(self):
-        if(self.choi==1):
-            return (self.value*2.20462)
-        elif(self.choi == 2):
-            return ((self.value-32)*0.4533592)
-        else:
-            return ("Enter the valid key")                             
+#     def weights(self):
+#         if(self.choi==1):
+#             return (self.value*2.20462)
+#         elif(self.choi == 2):
+#             return ((self.value-32)*0.4533592)
+#         else:
+#             return ("Enter the valid key")                             
 
 
-while(True):
-   print("") 
-   print("Distance convert one units to another units then type distance")
-   print("Temperture convert one units to another units then type temperture")
-   print("Weight convert one units to another units then type weight")
-   print("if your qick this menu then type qick")
-   choice = (input("Enter the your choice :- ")).lower()
-   if (choice == "distance"):
-        print("convert kilomerter -> miles then press 1")
-        print("convert miles -> kilometer then press 2")
-        choi = int(input("Enter your choices key :- "))
-        value = float(input("Enter the value whicn are you change :- "))
-        c1 = converts(choi,value)
-        print(c1.distances())
-        print()
+# while(True):
+#    print("") 
+#    print("Distance convert one units to another units then type distance")
+#    print("Temperture convert one units to another units then type temperture")
+#    print("Weight convert one units to another units then type weight")
+#    print("if your qick this menu then type qick")
+#    choice = (input("Enter the your choice :- ")).lower()
+#    if (choice == "distance"):
+#         print("convert kilomerter -> miles then press 1")
+#         print("convert miles -> kilometer then press 2")
+#         choi = int(input("Enter your choices key :- "))
+#         value = float(input("Enter the value whicn are you change :- "))
+#         c1 = converts(choi,value)
+#         print(c1.distances())
+#         print()
 
-   elif (choice =="temperture"):
-          print("convert fahrenhit -> celsius then press 1")
-          print("convert celsius -> fahrenhit then press 2")
-          choi = int(input("Enter your choices key :- ")) 
-          value = float(input("Enter the value whicn are you change :- "))
-          c1 = converts(choi,value)
-          print(c1.temperatures())
-          print()
+#    elif (choice =="temperture"):
+#           print("convert fahrenhit -> celsius then press 1")
+#           print("convert celsius -> fahrenhit then press 2")
+#           choi = int(input("Enter your choices key :- ")) 
+#           value = float(input("Enter the value whicn are you change :- "))
+#           c1 = converts(choi,value)
+#           print(c1.temperatures())
+#           print()
 
-   elif (choice =="weight"):
-          print("convert kilograms -> pounds then press 1")
-          print("convert pounds -> kilograms then press 2")
-          choi = int(input("Enter your choices key :- "))
-          value = float(input("Enter the value whicn are you change :- "))
-          c1 = converts(choi,value)
-          print(c1.weight())
-          print()
+#    elif (choice =="weight"):
+#           print("convert kilograms -> pounds then press 1")
+#           print("convert pounds -> kilograms then press 2")
+#           choi = int(input("Enter your choices key :- "))
+#           value = float(input("Enter the value whicn are you change :- "))
+#           c1 = converts(choi,value)
+#           print(c1.weight())
+#           print()
 
-   elif(choice=="qick"):
-           print("------- quick ------")
-           break   
-   else:
-        print("please Enter given choices! thank you")
-        print()                
+#    elif(choice=="qick"):
+#            print("------- quick ------")
+#            break   
+#    else:
+#         print("please Enter given choices! thank you")
+#         print()                
+
+##############  daily expences ####################
