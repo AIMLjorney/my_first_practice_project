@@ -266,13 +266,183 @@ import time as ti
 # def indertion_sort(arr):
 #     leng =        
 
-import tkinter as tk
+# import tkinter as tk
 
 # Step 1: Create the main window (root window)
-root = tk.Tk()
-root.title("Tkinter Basic Example")
+# root = tk.Tk()
+# root.title("Tkinter Basic Example")
 
-root.mainloop()
+# root.mainloop()
+ 
+
+ ##################  Rocks , Paper , Sessions  #########################
+# import random as r
+
+# choi = ("Rock", "Paper", "Scissors")
+
+# class Rps:
+#     def __init__(self):
+#         self.user_score = 0
+#         self.computer_score = 0
+
+#     def check(self, user):
+#         computer = r.choice(choi)
+#         print(f"Computer chose: {computer}")
+#         if (
+#             (user == "Rock" and computer == "Scissors") or
+#             (user == "Paper" and computer == "Rock") or
+#             (user == "Scissors" and computer == "Paper")
+#         ):
+#             self.user_score += 1
+#             print("Congratulations! You win!")
+#         elif user == computer:
+#             print("It's a tie! Try again!")
+#         else:
+#             self.computer_score += 1
+#             print("You lose! Better luck next time!")
+
+#     def display(self):
+#         print(f"Your Score: {self.user_score}")
+#         print(f"Computer's Score: {self.computer_score}")
 
 
+# # Main Game Loop
+# c1 = Rps()
+# while True:
+#     choice = input("""Enter your choice ("Rock", "Paper", "Scissors") or 'quit' to exit: """).capitalize()
 
+#     if choice == 'Quit':
+#         print("You quit the game! Thank you for playing.")
+#         c1.display()
+#         break
+#     elif choice not in choi:
+#         print("Invalid choice! Please select from 'Rock', 'Paper', or 'Scissors'.")
+#         continue
+#     else:
+#         c1.check(choice)
+#         c1.display()
+
+##########  password genrater ########################
+# import random as r
+# import string as s
+# def password(length,upper_char,lower_char,digit,specific_char):
+#     upper_charter = s.ascii_uppercase
+#     lower_charter = s.ascii_lowercase
+#     digits = s.digits
+#     special = "~`!@#$%^&*:;?"
+
+#     poolcharter = ""
+#     if upper_char:
+#         poolcharter+=upper_charter
+#     if lower_char:
+#         poolcharter+=lower_charter
+#     if digit:
+#         poolcharter+=digits
+#     if specific_char:
+#         poolcharter+=special
+
+#     if not poolcharter:
+#         raise ValueError("Please fill form correctly!")    
+
+#     passwordsss = []
+#     if upper_char:
+#         passwordsss.append(r.choice(upper_charter))
+#     if lower_char:
+#         passwordsss.append(r.choice(lower_charter))  
+#     if digit:
+#         passwordsss.append(r.choice(digits)) 
+#     if specific_char:
+#         passwordsss.append(r.choice(special)) 
+    
+    
+#     while (len(passwordsss) < length): 
+#         passwordsss.append(r.choice(poolcharter)) 
+
+#     r.shuffle(passwordsss)
+#     return "".join(passwordsss)     
+    
+
+# try:
+
+#     passward_length = int(input("Enter the desired password length:-"))
+#     uppercase_letter = input("include uppercase letters? (y/n):-").strip().lower() == 'y'
+#     lower_letters = input("include lowercase letters? (y/n):-").strip().lower() == 'y'
+#     digits = input("include lowercase letters? (y/n):-").strip().lower() == 'y'
+#     specific_char = input("include special characters? (y/n) :-").strip().lower() == 'y'
+#     w = password(passward_length,uppercase_letter,lower_letters,digits,specific_char)
+#     print(w)
+# except ValueError as e:
+#     print("Error : {}".format(e))  
+# except Exception as e:
+#     print(e)  
+
+class converts:
+    def __init__(self,choi,value): 
+        self.choi = choi
+        self.value = value
+
+    def distances(self):
+        if(self.choi==1):
+            return (self.value*0.621371)
+        elif(self.choi == 2):
+            return (self.value*1.60934)
+        else:
+            return ("Enter the valid key")
+
+    def temperatures(self):
+        if(self.choi==1):
+            return (self.value*(9/5)+32)
+        elif(self.choi == 2):
+            return ((self.value-32)*5/9)
+        else:
+            return ("Enter the valid key")  
+
+    def weights(self):
+        if(self.choi==1):
+            return (self.value*2.20462)
+        elif(self.choi == 2):
+            return ((self.value-32)*0.4533592)
+        else:
+            return ("Enter the valid key")                             
+
+
+while(True):
+   print("") 
+   print("Distance convert one units to another units then type distance")
+   print("Temperture convert one units to another units then type temperture")
+   print("Weight convert one units to another units then type weight")
+   print("if your qick this menu then type qick")
+   choice = (input("Enter the your choice :- ")).lower()
+   if (choice == "distance"):
+        print("convert kilomerter -> miles then press 1")
+        print("convert miles -> kilometer then press 2")
+        choi = int(input("Enter your choices key :- "))
+        value = float(input("Enter the value whicn are you change :- "))
+        c1 = converts(choi,value)
+        print(c1.distances())
+        print()
+
+   elif (choice =="temperture"):
+          print("convert fahrenhit -> celsius then press 1")
+          print("convert celsius -> fahrenhit then press 2")
+          choi = int(input("Enter your choices key :- ")) 
+          value = float(input("Enter the value whicn are you change :- "))
+          c1 = converts(choi,value)
+          print(c1.temperatures())
+          print()
+
+   elif (choice =="weight"):
+          print("convert kilograms -> pounds then press 1")
+          print("convert pounds -> kilograms then press 2")
+          choi = int(input("Enter your choices key :- "))
+          value = float(input("Enter the value whicn are you change :- "))
+          c1 = converts(choi,value)
+          print(c1.weight())
+          print()
+
+   elif(choice=="qick"):
+           print("------- quick ------")
+           break   
+   else:
+        print("please Enter given choices! thank you")
+        print()                
