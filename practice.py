@@ -247,7 +247,32 @@ import time as ti
 # t.forward(80)
 # ti.sleep(5) 
   
-t.forward(100)
-t.left(70)
-t.forward(70)
-t.left(70)  
+# t.forward(100)
+# t.left(70)
+# t.forward(70)
+# t.left(70) 
+
+# def bubble_sort(arr):
+#     leng = len(arr)
+#     for i in range(leng):
+#         for j in range(0,leng-i-1):
+#             if (arr[j]>arr[j+1]):
+#                  sw = arr[j]
+#                  arr[j] = arr[j+1]
+#                  arr[j+1] = sw
+#     return arr
+# print(bubble_sort([12,34,5,6,7]))
+
+# def indertion_sort(arr):
+#     leng =        
+
+import tkinter as tk
+
+# Step 1: Create the main window (root window)
+root = tk.Tk()
+root.title("Tkinter Basic Example")
+
+root.mainloop()
+
+
+
