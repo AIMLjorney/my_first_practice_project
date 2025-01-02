@@ -113,20 +113,49 @@ import numpy as np
 # matrix=matrix.reshape(-1)
 # print()
 # print(matrix)
-np.random.seed(12)
-sales = np.random.randint(low=10,high=90,size=(3,3))
-print(sales)
-total_sales = np.sum(sales)
-average_sales = np.average(sales)
-minimum_sales = np.min(sales)
-maximum_sales = np.max(sales)
-num = np.where(average_sales<sales)
-print(minimum_sales)
-print(maximum_sales)
-print(total_sales)
-print(average_sales)
-print(num)
+# np.random.seed(12)
+# sales = np.random.randint(low=10,high=90,size=(3,3))
+# print(sales)
+# total_sales = np.sum(sales)
+# average_sales = np.average(sales)
+# minimum_sales = np.min(sales)
+# maximum_sales = np.max(sales)
+# for i in sales:
+#     for j in i:
+#         if (j>average_sales):
+#             print("values :-",j)
+#             break
+#         else:
+#             pass
 
+# print(minimum_sales)
+# print(maximum_sales)
+# print(total_sales)
+# print(average_sales)
 
+# new_array = sales*10/100
+# print(new_array)
+# total_sales = np.sum(new_array)
+# average_sales = np.average(new_array)
+# minimum_sales = np.min(new_array)
+# maximum_sales = np.max(new_array)
+# for i in new_array:
+#     for j in i:
+#         if (j>average_sales):
+#             print("values :-",j)
+#             break
+#         else:
+#             pass
+
+# print(minimum_sales)
+# print(maximum_sales)
+# print(total_sales)
+# print(average_sales)
+
+# np.random.seed(42)
+# price = np.random.uniform(low=200,high=1000,size=10)
+# print(price)
+# countites = np.random.randint(low=10,high=50,size=10)
+# print(countites)
 
 
