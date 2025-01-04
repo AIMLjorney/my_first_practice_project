@@ -401,7 +401,14 @@ import numpy as np
 # compute(lis)
 import pandas as pd
 import numpy as np
+import string as str
 file = pd.read_csv("C:/Users/hp5cd/Downloads/used_car_dataset.csv")
-print(file[0:20].s)
-
+file = file[0:20]
+print(file.columns)
+file['s'] = file["Brand"].str.contains(pat="BMW",case=True)
+for s in file["s"]:
+    if s == True:
+        file["s"] = "BMW"
+    
+print(file)
 
