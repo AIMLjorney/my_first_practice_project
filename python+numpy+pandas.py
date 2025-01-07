@@ -10,8 +10,23 @@
 # print()
 import pandas as pd
 import numpy as np
-file = pd.read_csv("C:/Users/hp5cd/Downloads/train.csv")
-file.dropna(axis=0,how='any')
+files = pd.read_csv("C:/Users/hp5cd/Downloads/train.csv")
+file = files.loc[0:10, ['Age', 'Pclass', 'Survived']]
+if file['Age'].isnull().any():
+    file['Age'] = file['Age'].fillna(file['Age'].median())
+corrraltion1 = file['Age'].cov(file['Pclass'])
+corrraltion2 = file['Pclass'].cov(file['Survived'])
+corrraltion3 = file['Survived'].cov(file['Age'])
+print("corelation of the age and pclass",corrraltion1)
+print("correlation of the pclass and survived",corrraltion2)
+print("correlation of the  survived and age",corrraltion3)
 print(file.columns)
-print(file.loc[0:10,['Name', 'Sex', 'Age']])
-print(file.iloc[0:10,[0,1,2,3,4]])
+files = files.loc[0:20,['Sex','Embarked']]
+for i in files['Sex']:
+    print(i)
+    if (i == "male"):
+        files['Sex'] = 0
+    else:
+        files['Sex'] = 1     
+print(files.loc[0:20,['Sex','Embarked']])
+print(files['Sex'].str.contains(""))
