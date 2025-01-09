@@ -22,11 +22,21 @@ print("correlation of the pclass and survived",corrraltion2)
 print("correlation of the  survived and age",corrraltion3)
 print(file.columns)
 files = files.loc[0:20,['Sex','Embarked']]
-for i in files['Sex']:
-    print(i)
-    if (i == "male"):
-        files['Sex'] = 0
+def applyy(num):
+    if num == 'male':
+        return 0
     else:
-        files['Sex'] = 1     
-print(files.loc[0:20,['Sex','Embarked']])
-print(files['Sex'].str.contains(""))
+        return 1
+
+def changed(val):
+    if val == 'S':
+        return 1
+    elif(val=='Q'):
+        return 2
+    elif(val=='C'):
+        return 3
+    
+files['Sex'] = files['Sex'].apply(applyy)
+files['Embarked'] = files['Embarked'].apply(changed)
+print(files['Embarked'],files['Sex'])
+print(files)    
