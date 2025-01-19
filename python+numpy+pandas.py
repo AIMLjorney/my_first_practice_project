@@ -40,32 +40,82 @@
 # files['Embarked'] = files['Embarked'].apply(changed)
 # print(files['Embarked'],files['Sex'])
 # print(files)    
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as py
-file = pd.read_csv("C:/Users/hp5cd/Downloads/used_car_dataset.csv")
+# import pandas as pd
+# import numpy as np
+# import matplotlib.pyplot as py
+# file = pd.read_csv("C:/Users/hp5cd/Downloads/used_car_dataset.csv")
+# # print(file)
+# # print(file.describe())
+# # print(file.tail())
+# def ma(lis):
+#     mean = lis.mean()
+#     medium = lis.median()
+#     mode = lis.mode().values[0]
+#     return(mean,medium,mode)
+
+# def fueltonum(val):
+#     if(val=='Petrol'):
+#         return 1
+#     elif(val=='Diesel'):
+#         return 2
+#     else:
+#         return 3
+    
+# (mean,median,mode) = ma(file['Year'])
+# print(mean)
+# print(median)
+# print(mode)
+
+
+# quar1 = file['Year'].quantile(q=0.25)
+# quar3 = file['Year'].quantile(q=0.75)
+# quar2 = quar3-quar1
+# lower_boundry = quar1-(1.5*quar2)
+# upper_boundery = quar3+(1.5*quar2)
+# print(quar3)
+# print(lower_boundry)
+# print(upper_boundery)
+# print(file[(file['Year']<lower_boundry) | (file['Year']>upper_boundery)])
+# # print(file.loc[0:10,['FuelType']])
+# file['FuelType'] = file['FuelType'].apply(fueltonum)
 # print(file)
-# print(file.describe())
-# print(file.tail())
-def ma(lis):
-    mean = lis.mean()
-    medium = lis.median()
-    mode = lis.mode().values[0]
-    return(mean,medium,mode)
-(mean,median,mode) = ma(file['Year'])
-print(mean)
-print(median)
-print(mode)
+# py.hist(file['Year'])
+# py.show()
 
+# import numpy as np
+# import pandas as pd
+# arr1 = [5,7,12,16,20]
+# arr2 = [40,102,180,210,240]
+# df1 = pd.Series(arr1)
+# df2 = pd.Series(arr2)
+# mean1 = df1.sum()/df1.count()
+# mean2 = df2.sum()/df2.count()
+# c = sum()
 
-quar1 = file['Year'].quantile(q=0.25)
-quar3 = file['Year'].quantile(q=0.75)
-quar2 = quar3-quar1
-lower_boundry = quar1-(1.5*quar2)
-upper_boundery = quar3+(1.5*quar2)
-print(quar3)
-print(lower_boundry)
-print(upper_boundery)
-print(file[(file['Year']<lower_boundry) | (file['Year']>upper_boundery)])
-py.hist(file['Year'])
-py.show()
+# print(mean1)
+
+# print(df1.cov(df2))
+import pandas as pd
+
+# Given series
+arr1 = [5, 7, 12, 16, 20]
+arr2 = [40, 102, 180, 210, 240]
+df1 = pd.Series(arr1)
+df2 = pd.Series(arr2)
+
+# Calculate slope (m) and intercept (c)
+n = len(df1)
+sum_x = df1.sum()
+sum_y = df2.sum()
+sum_xy = (df1 * df2).sum()
+sum_x2 = (df1 ** 2).sum()
+
+# Slope (m)
+slope = (n * sum_xy - sum_x * sum_y) / (n * sum_x2 - sum_x ** 2)
+
+# Intercept (c)
+intercept = (sum_y / n) - slope * (sum_x / n)
+
+print(f"Slope: {slope}")
+print(f"Intercept: {intercept}")
+
